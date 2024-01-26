@@ -27,7 +27,7 @@ class Summary:
         total_amount = ticket_amount + service_charge_amount
 
         print("TOTAL_COLLECTION", station,
-              total_amount, ticket_discount)
+              int(total_amount), int(ticket_discount))
 
         passenger_counter = Counter(
             [ticket.passenger.category for ticket in tickets])

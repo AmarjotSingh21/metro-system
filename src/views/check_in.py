@@ -5,11 +5,12 @@ from src.models.ticket import Ticket, TicketDatabase
 
 
 class CheckIn:
-    def __init__(self, input_list: list, payment_db: PaymentDatabase,
+    def __init__(self, metro_card_number: str, passenger_category: str,
+                 from_station: str, payment_db: PaymentDatabase,
                  metro_card_db: MetroCardDatabase, ticket_db: TicketDatabase) -> None:
-        self.metro_card_number = input_list[1]
-        self.passenger_category = input_list[2]
-        self.from_station = input_list[3]
+        self.metro_card_number = metro_card_number
+        self.passenger_category = passenger_category
+        self.from_station = from_station
         self.metro_card_db = metro_card_db
         self.payment_db = payment_db
         self.ticket_db = ticket_db
