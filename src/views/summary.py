@@ -32,7 +32,7 @@ class Summary:
         passenger_counter = Counter(
             [ticket.passenger.category for ticket in tickets])
         passenger_list: list = sorted(
-            passenger_counter.items(), key=lambda x: x[1], reverse=True)
+            passenger_counter.items(), key=lambda x: (-x[1], x[0]))
 
         print("PASSENGER_TYPE_SUMMARY")
         for passenger in passenger_list:
